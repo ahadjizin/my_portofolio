@@ -1,1 +1,18 @@
-cssfile
+* { margin:0; padding:0; }
+
+body {
+    margin: 0;
+    font-family: 'Langar', cursive;
+    font-size: 22px;
+    text-align: center;
+}
+header {
+    min-height:300px;
+    background-color: forestgreen;
+    padding-top:10px;
+    
+}
+header nav {
+    margin-top: 50px;
+}
+
