@@ -1,9 +1,17 @@
 /* DEFINING BASICS */
 body {
-    font-family: 'Source Sans Pro';
-    background:red;
+    font-family: 'Source Sans Pro';    
     margin:0;
     color:white;
+    font-weight: 600;
+/* nesting the grid & templates areas*/
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 60% 40%;
+    grid-template-areas:   /*grid-template-areas allows us to position various grid areas by referring to their name, and situating them in the value of this property. */
+    "header"
+    "body"
+    "footer";
 }
 
 a {
@@ -14,22 +22,28 @@ a {
 }
 img { 
     width:150px;
+    justify-self:center;
 }
 header {
+    grid-area: header; /* we need this for responsive view--same in footer and container */
     background:#FFFFFF;
     padding: 1em;
 }
 
 .container {
+    background-image:url(images/pafosbanner.jpg);
+    grid-area: body;
     padding: 4em 1em;
 }
 
 footer {
+    grid-area: footer;
     background:#571212;
 }
 
 ul {
-    margin:0;padding:0;
+    margin:0;
+    padding:0;
 }
 ul li {
     padding: 2em;
@@ -40,4 +54,39 @@ ul li span {
     font-size:1.4em;
     margin-bottom:1em;
     color: white;
+}
+ /*defining Grid style for BODY CONTAINER */
+ .container {
+    display:grid;
+    grid-template-columns: 66% auto; /* two columns 1st column 66%, 2nd column auto. */
+    padding: 4em 1em;
+}
+
+/* DEFINING GRID STYLE FOR FOOTER*/
+ul {
+    display:grid;
+    list-style-type:none;
+    margin:0;padding:0;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+}
+
+/* responsive view */
+@media only screen and (max-width: 500px) {
+    
+    body {
+        grid-template-areas: 
+            "header"
+            "footer"
+            "body";
+    }
+    ul, .container {
+        grid-template-columns: auto;  /*make ul and container one column and */
+        grid-template-rows: auto;     /* one row */
+    }
+
+    .container {
+        text-align:center;
+    }
+
 }
