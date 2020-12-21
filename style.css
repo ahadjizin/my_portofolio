@@ -1,18 +1,43 @@
-* { margin:0; padding:0; }
-
+/* DEFINING BASICS */
 body {
-    margin: 0;
-    font-family: 'Langar', cursive;
-    font-size: 22px;
-    text-align: center;
+    font-family: 'Source Sans Pro';
+    background:red;
+    margin:0;
+    color:white;
+}
+
+a {
+    text-decoration:none;
+    color:red;
+    font-size:1.8em;
+    font-weight:700;
+}
+img { 
+    width:150px;
 }
 header {
-    min-height:300px;
-    background-color: forestgreen;
-    padding-top:10px;
-    
-}
-header nav {
-    margin-top: 50px;
+    background:#FFFFFF;
+    padding: 1em;
 }
 
+.container {
+    padding: 4em 1em;
+}
+
+footer {
+    background:#571212;
+}
+
+ul {
+    margin:0;padding:0;
+}
+ul li {
+    padding: 2em;
+    color:#E98A8A;
+}
+ul li span {
+    display:block;
+    font-size:1.4em;
+    margin-bottom:1em;
+    color: white;
+}
